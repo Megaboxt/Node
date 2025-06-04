@@ -1,3 +1,3 @@
 # Node
 
-Una guía rápida para entender los conceptos 
+Una guía rápida para crear un servidor en Node.js
