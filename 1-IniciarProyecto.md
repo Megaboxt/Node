@@ -27,7 +27,7 @@ rápido que nos permita configurar nuestro entorno de trabajo luego.
 >En caso de utilizar el flag `npm init -y` salteamos todas las preguntas y se crea directamente un archivo llamado `package.json` en donde podremos *configurar* los
 valores por defecto de cada una de las propiedades que tiene el archivo por default.
 
-Este archivo llamado `package.json`
+Este archivo llamado `package.json` se ve de la siguiente manera:
 
 <pre>
   {
@@ -43,3 +43,26 @@ Este archivo llamado `package.json`
     "license": "ISC"
   }
 </pre>
+
+
+- name: define el nombre del proyecto. No puede contener guiones medios (-) ni
+mayúsculas o caracteres especiales.
+
+- version: establece el número de versión según la convención X.Y.Z donde X
+representa las versiones “major” donde existen cambios importantes de nuestro
+proyecto, la Y las versiones “minor” con cambios menores y la Z las versiones
+“patch” con parches de seguridad o arreglos de errores.
+
+- main: indica el “entry point” o archivo de entrada de nuestra aplicación.
+
+- scripts: propiedad de suma importancia donde podremos crear diferentes scripts
+para ejecutar nuestro código.
+
+- keywords: array de strings donde se colocan palabras clave que definen al
+proyecto.
+
+- author: responsable/s del proyecto.
+ 
+- license: tipo de licencia de uso y explotación del código fuente y/o del proyecto.  
+
+- description: cadena de texto que describe el proyecto.  
