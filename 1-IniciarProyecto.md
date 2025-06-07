@@ -45,8 +45,7 @@ Este archivo llamado `package.json` se ve de la siguiente manera:
 </pre>
 
 
-- name: define el nombre del proyecto. No puede contener guiones medios (-) ni
-mayúsculas o caracteres especiales.
+- name: define el nombre del proyecto. No puede contener mayúsculas o caracteres especiales.
 
 - version: establece el número de versión según la convención X.Y.Z donde X
 representa las versiones “major” donde existen cambios importantes de nuestro
