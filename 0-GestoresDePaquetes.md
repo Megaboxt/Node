@@ -29,7 +29,7 @@ El concepto de dependencias, paquetes o módulos es propio de la programación e
 
 ## NPM - Node Package Manager  
 
-Además de gestionar paquetes, NPM se encarga de listar y establecer el orden en el que se instala cada dependencia y a su vez cuando estas dependencias utilizan subdependencias, es decir, que el código de origen también utilizó NPM para instalar paquetes, el gestor se encarga de decidir qué versión de cada una de ellas debe utilizar para no entrar en conflictos.
+En este caso, nos vamos a enfocar en el Gestor de Paquetes NPM, que además de gestionar paquetes, NPM se encarga de listar y establecer el orden en el que se instala cada dependencia y a su vez cuando estas dependencias utilizan subdependencias, es decir, que el código de origen también utilizó NPM para instalar paquetes, el gestor se encarga de decidir qué versión de cada una de ellas debe utilizar para no entrar en conflictos.
 
 Una vez instaladas todas las dependencias necesarias, crea de forma automática un archivo llamado `package-lock.json` con el detalle minucioso de esta organización de paquetes y también otro archivo llamado `package.json` donde tenemos un detalle directo de las dependencias que nosotros instalamos en el proyecto pero a su vez permite declarar: nombre del proyecto, versión, archivo de inicio, autor, licencia y scripts de ejecución del proyecto, entre otras cosas.  
 
