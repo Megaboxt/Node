@@ -56,7 +56,7 @@ En función de los valores ingresados retorna un resultado:
 - Si existe un segundo argumento entonces el mensaje irá dirigido al nombre ingresado, caso contrario usará la palabra “mundo” para formular el saludo.  
 
 
-## Consejos al utilizar process.argv  
+## Consejos al utilizar `process.argv`  
 
 1. Validar los argumentos: Asegúrate de manejar casos en los que no se pasen suficientes argumentos o se usen comandos inválidos.
 
