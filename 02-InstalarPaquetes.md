@@ -20,7 +20,7 @@ NPM lee el archivo `package.json` creado anteriormente y el archivo `package-loc
 
 
 
-## Instalar Dependencias  
+## Instalar Express y Nodemon   
 
 Para realizar la instalación de dependencias, debemos usar el comando `npm install` seguido del nombre del paquete que deseamos instalar.  
 
