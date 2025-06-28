@@ -4,7 +4,7 @@ Un middleware es una función que se ejecuta en el medio del camino entre, un cl
 En simples palabras, es una función intermediaria que puede *revisar, modificar o decidir* qué hacer con la solicitud antes de devolver algo al cliente.  
 
 
-### Para qué se usan los middlewares ?
+## Para qué se usan los middlewares ?
 
 En Express se utilizan para: 
 
@@ -23,7 +23,7 @@ En Express se utilizan para:
 - Servir archivos estáticos.
 
 
-### Estructura de un middleware 
+## Estructura de un middleware 
 
 Un middleware en express siempre tiene esta forma:  
 
@@ -35,10 +35,10 @@ Un middleware en express siempre tiene esta forma:
 
 
 
-### Explicación de los parametros `req`, `res` y `next`:
+## Explicación de los parametros `req`, `res` y `next`:
 
 
-#### 1. Objeto de Solicitud (Request - `req`)  
+### 1. Objeto de Solicitud (Request - `req`)  
 
 Es un objeto que representa todos los datos que el cliente está enviado al servidor. Tiene varias *Propiedades* que se pueden utilizar para obtener diferentes datos
 
@@ -53,7 +53,7 @@ Es un objeto que representa todos los datos que el cliente está enviado al serv
 
 
 
-#### 2. Objeto de Respuesta (Response - `res`)
+### 2. Objeto de Respuesta (Response - `res`)
 
 Este objeto se encarga de devolver una respuesta con algún tipo de dato al cliente. A diferencia del Objeto Response, este se maneja con *Métodos* para enviar los datos.
 
@@ -67,7 +67,7 @@ Este objeto se encarga de devolver una respuesta con algún tipo de dato al clie
 
 
 
-#### 3. Función para Continuar al Siguiente Middleware - ( `next` )
+### 3. Función para Continuar al Siguiente Middleware - ( `next` )
 
 Este parámetro es una función callback que lo llamas para decirle a Express *"Ya terminé el proceso, sigue con el siguiente Middleware"*.  
 
@@ -107,7 +107,8 @@ Tambien se le puede pasar a la función `next()` un `new Error()` para que Expre
 
 
 
-## Ejemplo completo de un caso real *validando los datos de un formulario*
+## Ejemplo completo de un caso real *validando los datos de un formulario*          
+
 
 
     import express from 'express';
@@ -145,12 +146,29 @@ Tambien se le puede pasar a la función `next()` un `new Error()` para que Expre
     });
 
 
+
+
 Construimos un servidor en Express que contiene:
+
+- Un middleware de Express que se encarga de parsear todas las peticiones que tengan datos JSON.
+
+- Un middleware que verifica que, el Objeto enviado por el cliente contenga los datos obligatorios `nombre`, `email` y `mensaje`, si falta alguno, devuelve un mensaje de error.
 
 - Una ruta `/contacto` que recibe peticiones HTTP de tipo `POST`.
 
-- Un middleware que verifica que el Objeto enviado por el cliente contenga los datos obligatorios `nombre`, `email` y `mensaje`, si falta alguno, devuelve un mensaje de error.
 
 
 
+Podemos simular el envío de datos con Postman o Thunder Cliente, que son *Plataformas Integrales para desarrollar, Probar y Gestionar APIs*. En resumen, permiten enviar peticiones HTTP.
+
+
+POST /contacto
+
+Content-Type: application/json
+
+{
+    "nombre": "Megaboxt",
+    "email": "correo@correo.com",
+    "mensaje": "Realizando prueba de contacto"
+}
 
