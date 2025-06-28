@@ -9,7 +9,41 @@ Cuando trabajás con archivos y directorios en Node.js, necesitás proporcionar 
 Usar `__dirname` garantiza que las rutas sean absolutas, eliminando la dependencia de la ubicación actual desde donde se ejecuta el script.
 
 
-## Uso de `__dirname` en CJS
+
+## Uso de `__dirname` en ES Modules
+
+En proyectos que usan ES Modules, `__dirname` no está disponible. En su lugar, puedes usar `import.meta.url` para obtener una ruta absoluta.
+
+    import { fileURLToPath } from 'url';
+    import path from 'path';
+
+    // Obtener el directorio actual
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+
+    console.log('Ruta absoluta: ', __dirname);
+
+    // Leemos el archivo ejemplo.txt
+    fs.readFile(__dirname, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error al leer el siguiente archivo: ', err);
+        return
+      }
+      console.log('Contenido del archivo: ', data);
+    });
+
+
+### Qué es lo que hace este código ?
+
+- Utilizamos el método `fileURLToPath` del módulo nativo `url`, el cual recibirá y formateará el valor de `import.meta.url` para devolvernos la posición actual de nuestro archivo.
+
+- Mediante el método `path.dirname()` tomaremos sólo la ruta (quitando el nombre del archivo) logrando el mismo resultado que en CJS.  
+
+
+
+
+
+## Uso de `__dirname` en Common JS
 
 Supongamos que tenemos la siguiente estructura de directorios y archivos: 
 
@@ -70,30 +104,6 @@ Analicemos este código paso a paso:
   - `fs.readFile` usa esa ruta absoluta para acceder al archivo, asegurándose de que funcione sin importar desde dónde ejecutes el script.  
 
 
-## Uso de `__dirname` en ESM
-
-En proyectos que usan ES Modules, `__dirname` no está disponible. En su lugar, puedes usar `import.meta.url` para obtener una ruta absoluta.
-
-    import { fileURLToPath } from 'url';
-    import path from 'path';
-
-    // Obtener el directorio actual
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-
-    console.log('Ruta absoluta: ', __dirname);
-
-    // Leemos el archivo ejemplo.txt
-    fs.readFile(__dirname, 'utf8', (err, data) => {
-      if (err) {
-        console.error('Error al leer el siguiente archivo: ', err);
-        return
-      }
-      console.log('Contenido del archivo: ', data);
-    });
-
-
-En esta ocasión aprovechamos el método `fileURLToPath` del módulo nativo `url`, el cual recibirá y formateará el valor de `import.meta.url` para devolvernos la posición actual de nuestro archivo y mediante el método `path.dirname()` tomaremos sólo la ruta (quitando el nombre del archivo) logrando el mismo resultado que en CJS.  
 
 ## Conclusión:  
 
