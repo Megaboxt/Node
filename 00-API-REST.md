@@ -36,7 +36,7 @@ La estructura de archivos nos ayuda a que el código esté ordenado según su pr
 ![image](https://github.com/user-attachments/assets/87e874fc-5d9e-4ac7-a417-d5582ff2192f)
 
 
-En la estructura podemos notar los siguientes directorios: 
+En la estructura podemos notar los siguientes directorios:  
 
 - `src`: Es la carpeta principal, que se encarga de separar los archivos principales y de configuración del resto de la aplicación.
 
