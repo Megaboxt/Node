@@ -33,3 +33,16 @@ En este caso, nos vamos a enfocar en el Gestor de Paquetes NPM, que además de g
 
 Una vez instaladas todas las dependencias necesarias, crea de forma automática un archivo llamado `package-lock.json` con el detalle minucioso de esta organización de paquetes y también otro archivo llamado `package.json` donde tenemos un detalle directo de las dependencias que nosotros instalamos en el proyecto pero a su vez permite declarar: nombre del proyecto, versión, archivo de inicio, autor, licencia y scripts de ejecución del proyecto, entre otras cosas.  
 
+
+## Paquetes Base del Proyecto
+
+En la consola ejecutar los siguientes comandos, siempre hay que fijarse la ruta o el path desde donde estas ubicado, para intarlar adecuadamente las dependencias y/o diferentes paquetes que sean necesarios
+
+npm init -y // Crea el archivo package.json
+
+npm install express // Instala la dependencia para crear un servidor Express
+
+npm install nodemon // Es un watcher de cambios en tiempo real de tu proyecto
+
+npm install cors // Instala la dependencia para habilitar solicitudes HTTP de sitios cruzados
+
