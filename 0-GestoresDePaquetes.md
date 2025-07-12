@@ -36,13 +36,19 @@ Una vez instaladas todas las dependencias necesarias, crea de forma automática 
 
 ## Paquetes Base del Proyecto
 
+Por lo general para crear un servidor en Node con Express ya hay una serie de paquetes y comandos a declarar en consola para crear los archivos iniciales y la estructura del proyecto.
+
 En la consola ejecutar los siguientes comandos, siempre hay que fijarse la ruta o el path desde donde estas ubicado, para intarlar adecuadamente las dependencias y/o diferentes paquetes que sean necesarios
 
-npm init -y // Crea el archivo package.json
-
-npm install express // Instala la dependencia para crear un servidor Express
-
-npm install nodemon // Es un watcher de cambios en tiempo real de tu proyecto
-
-npm install cors // Instala la dependencia para habilitar solicitudes HTTP de sitios cruzados
+    // Crea el archivo package.json
+    npm init -y 
+    
+    // Instala la dependencia para crear un servidor Express
+    npm install express 
+    
+    // Es un watcher de cambios en tiempo real de tu proyecto
+    npm install nodemon 
+    
+    // Instala la dependencia para habilitar solicitudes HTTP de sitios cruzados
+    npm install cors 
 
