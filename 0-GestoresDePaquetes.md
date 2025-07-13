@@ -17,7 +17,7 @@ Estas herramientas facilitan la instalación, actualización y gestión de bibli
 
 El concepto de dependencias, paquetes o módulos es propio de la programación en general, incluso existen gestores de paquetes para instalar programas en los distintos sistemas operativos. Los más conocidos son: 
 
-- NPM (Node Package Manager)
+- NPM (Node Package Manager).
 
 - HomeBrew: Permite manejar programas del sistema operativo Mac OS integrado en las computadoras marca Apple.  
 
