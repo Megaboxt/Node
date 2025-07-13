@@ -27,4 +27,18 @@ Este middleware capturará cualquier solicitud no gestionada previamente y respo
     });
 
 
-En este código, después de declarar las rutas "válidas", agregamos un middleware que captura cualquier solicitud no manejada previamente. Este middleware utiliza el método app.use() y envía al cliente una respuesta con el código de estado 404, que es el estándar HTTP para indicar que un recurso no fue encontrado.
+En este código, después de declarar las rutas "válidas", agregamos un middleware que captura cualquier solicitud no manejada previamente.  
+Este middleware utiliza el método `app.use()` y envía al cliente una respuesta con el código de `estado 404`, que es el estándar HTTP para indicar que un recurso no fue encontrado.  
+Este enfoque permite manejar automáticamente cualquier ruta no definida, como `/products` o `/users`, sin necesidad de crear manualmente respuestas individuales.
+
+Aunque en este caso trabajamos específicamente con el código de estado 404 para rutas no encontradas, el manejo de errores puede abarcar otros escenarios comunes. Por ejemplo:
+
+
+- 400 (Bad Request) para solicitudes mal formadas o con datos inválidos.
+
+- 401 (Unauthorized) y 403 (Forbidden) para problemas relacionados con autenticación o permisos.
+
+- 500 (Internal Server Error) para errores internos del servidor.
+
+
+Implementar un buen manejo de errores es esencial para garantizar que la aplicación no solo sea funcional, sino también robusta y confiable, brindando siempre respuestas claras y adecuadas a los usuarios frente a cualquier eventualidad.
