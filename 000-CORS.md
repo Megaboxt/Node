@@ -29,7 +29,7 @@ El estándar de intercambio de origen cruzado (CORS) se utiliza para habilitar l
 
 
 
-## ¿Cómo habilitar solicitudes de origen cruzado?  
+## ¿Cómo habilitar solicitudes de origen cruzado en Node ?  
 
 Hay distintas formas de hacerlo, la primera es manual y para ello vamos a utilizar el header `Access-Control-Allow-Origin` junto a otros similares.
 
