@@ -1,5 +1,3 @@
-# Node
+# Node JS
 
-Una guía explícita para crear un servidor en Node.js
-
-
+Una guía explícita y detallada para crear un servidor en Node y Express JS
