@@ -47,8 +47,13 @@ En la consola ejecutar los siguientes comandos, siempre hay que fijarse la ruta 
     npm install express 
     
     // Es un watcher de cambios en tiempo real de tu proyecto
-    npm install nodemon 
+    npm i -D nodemon 
     
     // Instala la dependencia para habilitar solicitudes HTTP de sitios cruzados
     npm install cors 
 
+    // SDK de firebase
+    npm install firebase
+
+    // libreria para manejar variables de entorno
+    npm install dotenv
